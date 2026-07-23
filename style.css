@@ -1,0 +1,607 @@
+/* Desktop first */
+.container {
+  display: flex;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    font-family: arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #1f2937;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:Arial, sans-serif;
+}
+
+nav {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo {
+    color:white;
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style:  none;
+}
+
+.nav-links a {
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+.hero-container {
+    width:90%;
+    max-width:1100px;
+    min-height: cacl(100vh - 72px);
+    margin: 0 auto;
+
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-image img {
+    width: 320px;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+}
+
+.hero-image, .hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    color: #4b5563;
+    margin-bottom:20px;
+}
+
+.discription {
+    max-width: 550px;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-top:20px;
+}
+
+.hero-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.hero {
+    padding: 70px 0;
+}
+
+.contact {
+    text-align: center;
+    padding-top: 60px;
+}
+.contact-card{
+    max-width:500px;
+    margin:80px auto;
+    padding:40px;
+    background:white;
+    border-radius:20px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-card .space {
+    padding-top:10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact-card .para {
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.contact-card .paraF {
+    padding-top: 40px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+.contact-card a{
+    color:#2563eb;
+    text-decoration:none;
+}
+
+.contact-card a:hover{
+    text-decoration:underline;
+}
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:25px;
+}
+.about {
+    padding: 90px 0;
+    background-color: #f8fafc;
+}
+.about-container {
+    width: 90%;
+    max-width:850px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.section-label {
+    color: #2563eb;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.about-container h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+
+}
+.about-container p {
+    color: #4b5563;
+    line-height: 1.8;
+    font-size: 17px;
+
+}
+.roadmap {
+    padding: 80px 0;
+    background-color: #f8fafc;
+}
+
+.maps-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+
+.maps-container > h1 {
+    text-align: center;
+    font-size: 38px;
+    
+}
+
+.maps-container .roadmanp-description {
+    color: #4b5562;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 5px;
+    margin-bottom:50px;
+}
+
+.current-focus {
+    margin:60px 0;
+    text-align: center;
+    
+}
+
+.current-focus .focus-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #2563eb;
+    margin-bottom:10px;
+}
+
+.current-focus h3 {
+    font-size:28px;
+    color: #1f2937;
+}
+
+.skill {
+    display:flex;
+    justify-content:space-between;
+    border-bottom: 1px solid #e5e7eb;
+    padding:12px 0;
+}
+.status-box {
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+
+}
+
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.roadmap-card {
+    background-color: white;
+    padding: 28px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+}
+
+.roadmap-card h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+.roadmap-card p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    color: #374151;
+}
+
+.roadmap-card p:last-child {
+    border-bottom: none;
+}
+
+
+.projects {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.project-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.projects-container > h2,
+.projects-container > .section-label {
+    text-align: center;
+}
+
+.project-container > h2 {
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+.project-grid {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:24px;
+}
+
+.project-card {
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
+
+}
+
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-card > p {
+    line-height: 1.7;
+    color: #4b5563;
+}
+
+.project-tech {
+    color: #4b5563 !important;
+    font-weight: 600;
+    margin-bottom:15px;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top:24px;
+}
+
+.project-links a {
+    text-decoration: none;
+    color: white;
+    background-color: #2563eb;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.project-links a:hover {
+    background-color: #1d4ed8;
+}
+
+.progress-summary {
+    padding: 80px 0;
+    background-color: #f8fafc;
+    padding-bottom:30px;
+    
+}
+
+.progress-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px;
+}
+.progress-container p {
+    padding-top:10px;
+    color: #6b7280; 
+    font-family: Arial, sans-serif;
+    padding-bottom:30px;
+}
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.summary-card {
+    background-color: white;
+    padding:28px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow:(0, 0, 0, 0.1);
+}
+
+.progress-summary h2 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.summary-card p {
+    color: #6b7280;
+    margin-bottom: 10px;
+}
+
+.summary-card h3 {
+    font-size: 28px;
+    color: #1f2937;
+}
+
+.progress-implemented {
+    padding: 80px 0;
+    background-color: #f8fafc;
+    padding-bottom:30px;
+}
+
+.implemented-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 10px;
+
+}
+.implemented-card {
+    background-color:white;
+    padding:28px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    margin-top:20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition:0.3s;
+}
+
+.implemented-card .para {
+    padding-top: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#090a0a
+}
+
+.implemented-card:hover {
+    transform: translateY(-5px);
+    box-shadow:(0, 0, 0, 0.1)
+}
+
+.progress-milestone {
+    padding: 80px 0;
+    background-color: #f8fafc;
+    
+}
+
+.milestone-container {
+    width:90%;
+    max-width:1100px;
+    margin: 0 auto;
+}
+
+.milestone-card {
+    background-color: rgb(245, 243, 243);
+    padding:28px;
+    border: 1px solid #e5e7eb;
+    border-radius:16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition:0.3s;
+    margin-top: 20px;
+    
+}
+.milestone-card .para {
+    padding-top: 10px;;
+}
+
+.milestone-card:hover {
+    transform: translateY(-5px);
+    box-shadow:rgba(0, 0, 0, 0.1);
+    
+}
+.milestone-card {
+    border-left:5px solid blue;
+    padding-left:20px;
+}
+.milestone-card .date {
+    margin-top: 30px;
+    color:#6b7280;
+}
+
+.current-goal {
+    padding: 80px 0;
+    background-color:#f8fafc;
+
+}
+.current-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    
+}
+
+
+.current-card {
+    margin-top:20px;
+    background-color: white;
+    padding:28px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+.current-card .date {
+    padding-top: 30px;
+    color:#6b7280
+}
+.current-card .para {
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.current-card:hover {
+    transform: translateY(-5px);
+    box-shadow:(0, 0, 0, 0,1);
+    
+}
+
+.weekly-updates {
+    padding: 80px 0;
+    background-color: #f8fafc;
+}
+
+.weekly-container {
+    width: 90%;
+    max-width: 1100px;
+    margin:0 auto;
+}
+.weekly-container .blue {
+    color:#1d4ed8;
+}
+.weekly-grid {
+    padding-top: 20px;
+    display:grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.weekly-card {
+    background-color: white;
+    padding:28px;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition:0.3s;
+    
+}
+
+.weekly-card:hover {
+    transform: translateY(-5px);
+    box-shadow:(0, 0, 0, 0.1);
+}
+
+.weekly-card .para {
+    padding-top:5px;
+    color:#6b7280
+}
