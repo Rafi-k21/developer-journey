@@ -84,7 +84,7 @@ nav {
 .hero-container {
     width:90%;
     max-width:1100px;
-    min-height: cacl(100vh - 72px);
+    min-height: calc(100vh - 72px);
     margin: 0 auto;
 
 
@@ -437,7 +437,7 @@ nav {
 
 .summary-card:hover {
     transform: translateY(-5px);
-    box-shadow:(0, 0, 0, 0.1);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
 }
 
 .progress-summary h2 {
@@ -517,7 +517,7 @@ nav {
 
 .milestone-card:hover {
     transform: translateY(-5px);
-    box-shadow:rgba(0, 0, 0, 0.1);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
     
 }
 .milestone-card {
@@ -562,7 +562,7 @@ nav {
 
 .current-card:hover {
     transform: translateY(-5px);
-    box-shadow:(0, 0, 0, 0,1);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
     
 }
 
@@ -598,10 +598,290 @@ nav {
 
 .weekly-card:hover {
     transform: translateY(-5px);
-    box-shadow:(0, 0, 0, 0.1);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.1);
 }
 
 .weekly-card .para {
     padding-top:5px;
     color:#6b7280
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+h1,
+h2,
+h3,
+p,
+a {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+    nav {
+        width: 92%;
+        padding: 16px 0;
+        gap: 24px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero-container {
+        width: 92%;
+        gap: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-image img {
+        width: 280px;
+        height: 350px;
+    }
+
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
+    nav {
+        width: 92%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 0;
+        gap: 14px;
+    }
+
+    .logo {
+        font-size: 21px;
+        text-align: center;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    .nav-links a {
+        display: inline-block;
+        padding: 6px 4px;
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 45px 0 60px;
+    }
+
+    .hero-container {
+        width: 90%;
+        min-height: auto;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hero-image,
+    .hero-content {
+        width: 100%;
+        flex: none;
+    }
+
+    .hero-image {
+        order: 1;
+        padding-top: 0;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-image img {
+        width: min(260px, 80vw);
+        height: auto;
+        aspect-ratio: 4 / 5;
+        margin: 0 auto;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(32px, 9vw, 42px);
+        line-height: 1.1;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .discription {
+        max-width: 100%;
+        margin: 0 auto 24px;
+        font-size: 16px;
+    }
+
+    .hero-button {
+        margin-top: 8px;
+    }
+
+    .about,
+    .roadmap,
+    .projects,
+    .progress-summary,
+    .progress-implemented,
+    .progress-milestone,
+    .current-goal,
+    .weekly-updates {
+        padding: 60px 0;
+    }
+
+    .about-container,
+    .maps-container,
+    .project-container,
+    .progress-container,
+    .implemented-container,
+    .milestone-container,
+    .current-container,
+    .weekly-container {
+        width: 90%;
+    }
+
+    .about-container h2,
+    .maps-container > h1,
+    .project-container > h2 {
+        font-size: 30px;
+    }
+
+    .current-focus {
+        margin: 40px 0;
+    }
+
+    .current-focus h3 {
+        font-size: 24px;
+    }
+
+    .roadmap-grid,
+    .project-grid,
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roadmap-card,
+    .project-card,
+    .summary-card,
+    .implemented-card,
+    .milestone-card,
+    .current-card,
+    .weekly-card {
+        padding: 22px;
+    }
+
+    .skill,
+    .roadmap-card p {
+        gap: 15px;
+    }
+
+    .status-box {
+        flex-shrink: 0;
+    }
+
+    .project-links {
+        flex-wrap: wrap;
+    }
+
+    .project-links a {
+        flex: 1 1 140px;
+        text-align: center;
+    }
+
+    .progress-summary h2 {
+        text-align: center;
+    }
+
+    .contact {
+        padding: 50px 16px 0;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 500px;
+        padding: 28px 22px;
+    }
+
+    .contact-item {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 8px 14px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+    .about-container h2,
+    .maps-container > h1,
+    .project-container > h2 {
+        font-size: 27px;
+    }
+
+    .roadmap-card,
+    .project-card,
+    .summary-card,
+    .implemented-card,
+    .milestone-card,
+    .current-card,
+    .weekly-card {
+        padding: 19px;
+        border-radius: 13px;
+    }
+
+    .skill,
+    .roadmap-card p {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .status-box {
+        align-items: flex-start;
+    }
+
+    .project-links {
+        flex-direction: column;
+    }
+
+    .project-links a {
+        width: 100%;
+        flex: none;
+    }
+
+    .summary-card h3 {
+        font-size: 25px;
+    }
+
+    .contact-card {
+        padding: 24px 18px;
+    }
 }
